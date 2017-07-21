@@ -10,6 +10,7 @@ namespace C_Practice_Strings
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("(ง •̀_•́)ง ONE DAY I'LL BE A REAL AD (ง •̀_•́)ง");
             string firstName = "John";
             string lastName = "Leavings";
             string fullName = "John " + "Leavings";
