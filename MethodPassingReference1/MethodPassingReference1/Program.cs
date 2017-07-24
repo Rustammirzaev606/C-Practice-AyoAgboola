@@ -14,7 +14,7 @@ namespace MethodPassingReference1
             Console.WriteLine($"In the main method x = {x}");
             DisplayValueParameter(x);
             DisplayNewValue(ref x);
-
+            
             Console.WriteLine(x);
             Console.ReadLine();
         }
@@ -30,5 +30,7 @@ namespace MethodPassingReference1
             n = 1000;
             Console.WriteLine($"We are in the DUDEDUDEDUDE Method where x = {n}");
         }
+
+
     }
 }
