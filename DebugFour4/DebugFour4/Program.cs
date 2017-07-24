@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DebugFour4
 {
     class DebugFour4
-        {
+    {
         static void Main()
         {
             // Program computes sales commission based on the following:
@@ -37,18 +37,18 @@ namespace DebugFour4
             }
             else if (sales <= MEDSALES)
             {
-                commission = (1000 * LOWPCT) + ((sales - 1000) * (MEDPCT + LOWPCT));
+                commission = (1000 * LOWPCT) +  (sales - 1000) * (MEDPCT + LOWPCT);
                 //commission += BONUS1;
             }
             else if (sales <= HIGHSALES)
             {
-                commission = (1000 * LOWPCT) + ((sales - 1000) * (MEDPCT + LOWPCT)) + BONUS1;
+                commission = (1000 * LOWPCT) +  ((sales - 1000) * (MEDPCT + LOWPCT)) + BONUS1;
             }
             else if (sales > HIGHSALES)
             {
                 commission = (1000 * LOWPCT) + ((sales - 1000) * (MEDPCT + LOWPCT)) + BONUS1 + BONUS2;
             }
-            else
+            else 
             {
                 Console.WriteLine("Wrong numbers Q_Q");
             }

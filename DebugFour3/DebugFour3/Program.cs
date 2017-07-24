@@ -17,10 +17,10 @@ class DebugFour3
     {
         int credits, year;
         string inputString;
-        double tuition;
+        double tuition = 0;
         const int LOWCREDITS = 12;
         const int HIGHCREDITS = 18;
-        const double HOURFEE = 15000;
+        const double HOURFEE = 150;
         const double DISCOUNT = 0.15;
         const double FLAT = 1900.00;
         const double RATE = 100.00;
@@ -31,17 +31,47 @@ class DebugFour3
         WriteLine("Year in school? ");
         inputString = ReadLine();
         year = Convert.ToInt32(inputString);
-        if (credits > LOWCREDITS)
-            tuition = HOURFEE * credits;
-        else
-           if (credits == HIGHCREDITS)
-            tuition = FLAT;
-        else
-            tuition = FLAT + (credits - HIGHCREDITS) * RATE;
-        if (year < SENIORYEAR)
-            tuition = tuition - (tuition * DISCOUNT);
+        if (credits <= LOWCREDITS)
+        {
+            if (year == SENIORYEAR)
+            {
+                tuition = (HOURFEE * credits) - ((HOURFEE * credits) * DISCOUNT);
+            }
+            else
+            {
+                tuition = (HOURFEE * credits);
+            }
+        }
+        else if (credits <= HIGHCREDITS)
+        {
+            if (year == SENIORYEAR)
+            {
+                tuition = FLAT  -  (FLAT * DISCOUNT);
+            }
+            else
+            {
+                tuition = FLAT;
+            }
+            
+        }
+        else if (credits > HIGHCREDITS)
+        {
+            if (year == SENIORYEAR)
+            {
+                tuition = (FLAT + ((credits - HIGHCREDITS) * RATE)) - ((FLAT + ((credits - HIGHCREDITS) * RATE)) * DISCOUNT);
+            }
+            else
+            {
+                tuition = FLAT + ((credits - HIGHCREDITS) * RATE);
+            }
+            
+        }
+
+        //if (year < SENIORYEAR)
+        //    tuition = tuition - (tuition * DISCOUNT);
         WriteLine("For year {0}, with {1} credits",
            year, credits);
         WriteLine("Tuition is {0}", tuition.ToString("C"));
+        Console.ReadKey();
     }
 }
