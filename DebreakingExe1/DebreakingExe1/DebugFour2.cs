@@ -7,9 +7,9 @@ using System;
 using static System.Console;
 class DebugFour2
 {
-   static void FourTwo()
+    public  void FourTwo()
    {
-      int num1, num2, num3
+      int num1, num2, num3;
       string snum1, snum2, snum3;
       Write("Enter first number ");
       snum1 = ReadLine();

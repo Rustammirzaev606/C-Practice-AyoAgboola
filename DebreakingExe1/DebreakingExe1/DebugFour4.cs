@@ -9,7 +9,7 @@ using System;
 using static System.Console;
 class DebugFour4
 {
-   static void Aaaaa()
+   public void Four4()
    {
       double sales, commission;
       string inputString;

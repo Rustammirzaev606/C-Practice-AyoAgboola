@@ -4,7 +4,7 @@ using System;
 using static System.Console;
 class DebugFour1
 {
-   static void BugUno()
+   public void BugUno()
    {
       const double BASIC_DOG_PRICE = 2.00;
       const double CHILI_PRICE = 0.69;

@@ -7,7 +7,7 @@ using System;
 using static System.Console;
 class DebugFour3
 {
-   static void NoMoney()
+   public void Four3()
    {
       int credits, year;
       string inputString;
@@ -23,7 +23,7 @@ class DebugFour3
       inputString = ReadLine();
       credits = Convert.ToInt32(inputString);
       WriteLine("Year in school? ");
-      inputString = Readline();
+      inputString = ReadLine();
       year = Convert.ToInt32(inputString);
       if(credits > LOWCREDITS)
         tuition = HOURFEE * credits;
