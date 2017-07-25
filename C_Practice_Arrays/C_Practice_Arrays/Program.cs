@@ -28,6 +28,10 @@ namespace C_Practice_Arrays
             array99[6] = 84;
             Console.WriteLine($"{array99[0]} {array99[1]} {array99[2]} {array99[3]} {array99[4]}  {array99[5]}  {array99[6]}");
             Console.ReadKey();
+            DateTime date = DateTime.Now;
+            DateTime s1 = DateTime.UtcNow;
+            Console.WriteLine($"{date}--- {s1}");
+            Console.ReadKey();
         }
     }
 }
